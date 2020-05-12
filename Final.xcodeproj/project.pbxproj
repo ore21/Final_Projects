@@ -16,6 +16,7 @@
 		3F158FA424453C8F00E89875 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F158FA224453C8F00E89875 /* LaunchScreen.storyboard */; };
 		3F158FAF24453C8F00E89875 /* FinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F158FAE24453C8F00E89875 /* FinalTests.swift */; };
 		3F158FBA24453C8F00E89875 /* FinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F158FB924453C8F00E89875 /* FinalUITests.swift */; };
+		3F16171A2465CEFE00B6353B /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1617192465CEFE00B6353B /* TodoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F158F9124453C8E00E89875 /* Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F158F9124453C8E00E89875 /* To Dos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Dos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F158F9424453C8E00E89875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F158F9624453C8E00E89875 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3F158F9824453C8E00E89875 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		3F158FB524453C8F00E89875 /* FinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F158FB924453C8F00E89875 /* FinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalUITests.swift; sourceTree = "<group>"; };
 		3F158FBB24453C8F00E89875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1617192465CEFE00B6353B /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 		3F158F9224453C8E00E89875 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F158F9124453C8E00E89875 /* Final.app */,
+				3F158F9124453C8E00E89875 /* To Dos.app */,
 				3F158FAA24453C8F00E89875 /* FinalTests.xctest */,
 				3F158FB524453C8F00E89875 /* FinalUITests.xctest */,
 			);
@@ -104,6 +106,7 @@
 				3F158F9424453C8E00E89875 /* AppDelegate.swift */,
 				3F158F9624453C8E00E89875 /* SceneDelegate.swift */,
 				3F158F9824453C8E00E89875 /* ViewController.swift */,
+				3F1617192465CEFE00B6353B /* TodoCell.swift */,
 				3F158F9A24453C8E00E89875 /* Main.storyboard */,
 				3F158FA024453C8F00E89875 /* Assets.xcassets */,
 				3F158FA224453C8F00E89875 /* LaunchScreen.storyboard */,
@@ -148,7 +151,7 @@
 			);
 			name = Final;
 			productName = Final;
-			productReference = 3F158F9124453C8E00E89875 /* Final.app */;
+			productReference = 3F158F9124453C8E00E89875 /* To Dos.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3F158FA924453C8F00E89875 /* FinalTests */ = {
@@ -265,6 +268,7 @@
 				3F158F9F24453C8E00E89875 /* Final.xcdatamodeld in Sources */,
 				3F158F9924453C8E00E89875 /* ViewController.swift in Sources */,
 				3F158F9524453C8E00E89875 /* AppDelegate.swift in Sources */,
+				3F16171A2465CEFE00B6353B /* TodoCell.swift in Sources */,
 				3F158F9724453C8E00E89875 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +450,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bgonzalez526-students.mchenry.edu.Final";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "To Dos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,7 +468,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bgonzalez526-students.mchenry.edu.Final";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "To Dos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
