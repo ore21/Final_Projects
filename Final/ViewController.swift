@@ -15,7 +15,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     var todoManager : NSManagedObjectContext!
     var todos: [NSManagedObject] = []
-
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         }
     }
     @IBAction func addTodo(_ sender: Any) {
-        let todoAlert = UIAlertController(title: "Add To do", message: "New To do", preferredStyle: .alert)
+        let todoAlert = UIAlertController(title: "Add a task", message: "New Task", preferredStyle: .alert)
         
         todoAlert.addTextField()
         
@@ -51,6 +51,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         todoAlert.addAction(cancelAction)
         
         present(todoAlert, animated: true, completion: nil)
+        todoAlert.view.tintColor = UIColor.black
     }
     func save( todoName: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -97,18 +98,17 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
      
-        for item in todos {
-            if editingStyle == .delete {
-                
-                    self.todoTableView.delete(delete)
-                }
-              
-            do {
-                try self.todoManager.save()
-            } catch {
-                print("Error deleting a todo")
-            }
-            todos.removeAll()
+         if (editingStyle == .delete) {
+            let todo = todos[indexPath.row]
+                   todos.remove(at: indexPath.row)
+                   context.delete(todo)
+                   
+                   do {
+                    try context.save()
+                   } catch {
+                       print("Error deleting category with \(error)")
+                   }
+                   tableView.deleteRows(at: [indexPath], with: .automatic)  //includes updating UI so reloading is not necessary
     }
             
             }
